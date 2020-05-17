@@ -6,14 +6,16 @@
         <div class="line">
             <div class="s-12 m-6 l-6">
                 <div class="top-bar-contact">
-                    <p class="text-size-12">Contact Us: 0800 200 200 | <a class="text-orange-hover" href="mailto:contact@sampledomain.com">contact@sampledomain.com</a></p>
+                    <p class="text-size-12">Contact Us: 0800 200 200 | <a class="text-orange-hover"
+                                                                          href="mailto:contact@sampledomain.com">contact@sampledomain.com</a>
+                    </p>
                 </div>
             </div>
             <div class="s-12 m-6 l-6">
                 <div class="right">
                     <ul class="top-bar-social right">
                         <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
-                        <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                        <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a></li>
                         <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
                         <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
                     </ul>
@@ -26,23 +28,29 @@
     <nav class="background-white background-primary-hightlight">
         <div class="line">
             <div class="s-12 l-2">
-                <a href="index.html" class="logo"><img src="{% static 'img/logo-free.png'%}" alt=""></a>
+                <a href="index.html" class="logo"><img src="{% static 'img/logo-free.png' %}" alt=""></a>
             </div>
             <div class="top-nav s-12 l-10">
                 <p class="nav-text"></p>
                 <ul class="right chevron">
                     <li><a href="/home">Anasayfa</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a>Services</a>
+                    <li><a>Categories</a>
+
                         <ul>
-                            <li><a>Service 1</a>
-                                <ul>
-                                    <li><a>Service 1 A</a></li>
-                                    <li><a>Service 1 B</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Service 2</a></li>
+                            {% load mptt_tags %}
+                            {% recursetree category %}
+                                <li>
+                                    <a href="/category/{{ node.slug }}">{{ node.title }}</a>
+                                    {% if not node.is_leaf_node %}
+                                        <ul>
+                                            <li> {{ children }} </li>
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endrecursetree %}
                         </ul>
+
                     </li>
                     <li><a href="/hakkimizda">Hakkımızda</a></li>
                     <li><a href="/referanslar">Referanslar</a></li>
@@ -51,4 +59,5 @@
             </div>
         </div>
     </nav>
+
 </header>

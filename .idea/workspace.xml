@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6552ce7-bd07-410c-a507-3b0e49fba17a" name="Default Changelist" comment="15.video sonu">
-      <change afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/referanslarimiz.html" afterDir="false" />
+    <list default="true" id="d6552ce7-bd07-410c-a507-3b0e49fba17a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +140,9 @@
       <workItem from="1587466428255" duration="32000" />
       <workItem from="1588013510760" duration="377000" />
       <workItem from="1588628849412" duration="3028000" />
-      <workItem from="1588685966344" duration="5223000" />
+      <workItem from="1588685966344" duration="5328000" />
+      <workItem from="1589653880586" duration="11633000" />
+      <workItem from="1589723355406" duration="8002000" />
     </task>
     <task id="LOCAL-00001" summary="8.video sonu">
       <created>1586643974589</created>
@@ -153,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586791968831</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="12.video sonu">
+      <created>1588695731120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588695731120</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,17 +174,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="8.video sonu" />
     <MESSAGE value="10.video sonu" />
-    <option name="LAST_COMMIT_MESSAGE" value="10.video sonu" />
+    <MESSAGE value="12.video sonu" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.video sonu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="189" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586788951052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="189" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586788951052" />
-    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1588695704578">
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1588695730542">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588695704578" />
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588695730542" />
     <state x="557" y="184" key="FileChooserDialogImpl" timestamp="1586788839556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -185,14 +198,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="116" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587466457451" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1586791971305">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1588695736132">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586791971305" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1588685965888">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588695736132" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1589723414734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588685965888" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589723414734" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588688102624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,33 +1,30 @@
 {% load static %}
 <section class="section background-dark">
-        <div class="line">
-          <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
-            <div class="item">
-              <div class="s-12 center">
-                <img src="{% static 'img/01-boxed.jpg'%}" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">Prospera is the New Amazing HTML5 Template</p>
-                      <p class="text-white text-size-16 margin-bottom-40">Duis autem vel eum iriure dolor in hendrerit in vulputate velit<br> esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+    <div class="line">
+
+        <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows" >
+
+            {% for rs in sliderdata %}
+                <div class="item" style="padding-left: 150px ; padding-right: 200px">
+                    <div class="s-12 center">
+                        <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                        <img src="{{ rs.image.url }}" alt="sliderimg" style="width: 800px;height: 500px">
+
+                        <div class="carousel-content">
+                            <div class="padding-2x">
+                                <div class="s-12 m-12 l-8">
+                                    <p class="text-dark text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">{{ rs.title }}</p>
+                                    <p class="text-white text-size-16 margin-bottom-40">Duis autem vel eum iriure dolor
+                                        in hendrerit in vulputate velit<br> esse molestie consequat, vel illum dolore eu
+                                        feugiat nulla facilisis</p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="s-12 center">
-                <img src="{% static 'img/02-boxed.jpg'%}" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">With Fully Responsive Components</p>
-                      <p class="text-white text-size-16 margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            {% endfor %}
+
         </div>
-      </section>
+    </div>
+</section>
