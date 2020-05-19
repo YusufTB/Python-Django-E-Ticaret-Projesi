@@ -1,0 +1,41 @@
+{% extends 'homebase.html' %}
+
+{% block title %}{{ categorydata.title }} {% endblock %}
+{% block keywords %} {{ categorydata.keywords }}{% endblock %}
+{% block description %} {{ categorydata.description }}{% endblock %}
+
+
+{% block content %}
+    <!-- MAIN -->
+    <main role="main">
+        <!-- Content -->
+        <article>
+            <header class="section background-primary text-center">
+                <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">{{ categorydata.title }}</h1>
+            </header>
+            <div class="section background-white">
+                <div class="line">
+                    <div class="margin text-center">
+
+                        {% for rs in products %}
+                            <div class="s-12 m-12 l-4 margin-bottom">
+                                <div class="padding-2x block-bordered border-radius">
+
+                                    <img  src="{{ rs.image.url }}"
+                                         style="width: 250px ; height: 125px ; margin-left: 16px ; margin-bottom: 20px">
+                                    <h2 class="text-thin"><b>{{ rs.title }}</b></h2>
+                                    <p class="margin-bottom-30">{{ rs.detail|safe }} </p>
+                                    <a class="button border-radius background-primary text-size-12 text-white text-strong"
+                                       href="/product/{{ rs.id }}/{{ rs.slug }}">Daha Fazla Bilgi Al</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+{% endblock %}

@@ -1,161 +1,189 @@
 {% load static %}
 <!-- MAIN -->
-    <main role="main">
-      <!-- Main Carousel -->
-      
-      <!-- Section 1 -->
-      <section class="section background-white"> 
+<main role="main">
+    <!-- Main Carousel -->
+
+    <!-- Section 1 -->
+    <section class="section background-white">
         <div class="line">
-          <div class="margin">
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'img/img-01.jpg'%}" alt="">
-              <h2 class="text-thin">Clean Design</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>                
+            <div class="margin">
+
+                {% for rs in dayproducts %}
+                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <img class="margin-bottom" src="{{ rs.image.url }}" alt="" style="height: 210px; width: 350px">
+                        <h2 class="text-thin">{{ rs.title }}</h2>
+                        <p>{{ rs.detail | safe }}</p>
+                        <a class="text-more-info text-primary-hover" href="/product/{{ rs.id }}/{{ rs.slug }}">Read more</a>
+                    </div>
+                {% endfor %}
+
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                    <img class="margin-bottom" src="{% static 'img/img-02.jpg' %}" alt="">
+                    <h2 class="text-thin">Valid code</h2>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                    <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                    <img class="margin-bottom" src="{% static 'img/img-03.jpg' %}" alt="">
+                    <h2 class="text-thin">Totally free</h2>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                    <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
             </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'img/img-02.jpg'%}" alt="">
-              <h2 class="text-thin">Valid code</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>                
-            </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'img/img-03.jpg'%}" alt="">
-              <h2 class="text-thin">Totally free</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>                
-            </div>
-          </div>
         </div>
-      </section>
-      
-      <!-- Section 2 -->
-      <section class="section background-primary text-center">
+    </section>
+
+    <div class="background-primary padding text-center"><h2 class="headline text-thin text-s-size-30">Son Eklenen İş
+        İlanları</h2></div>
+    <section class="section background-white">
         <div class="line">
-          <div class="s-12 m-10 l-8 center">
-            <h2 class="headline text-thin text-s-size-30">We are Web Design Heroes</h2>
-            <p class="text-size-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-          </div>
-        </div>  
-      </section>
-      
-      <!-- Section 3 -->
-      <section class="section background-white">
+            <div class="margin">
+                {% for rs in lastproducts %}
+                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <img class="margin-bottom" src="{{ rs.image.url }}" alt="" style="height: 210px; width: 350px">
+                        <h2 class="text-thin">{{ rs.title }}</h2>
+                        <p>{{ rs.detail | safe }}</p>
+                        <a class="text-more-info text-primary-hover" href="/product/{{ rs.id }}/{{ rs.slug }}">Read more</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="section background-primary text-center">
+        <div class="line">
+            <div class="s-12 m-10 l-8 center">
+                <h2 class="headline text-thin text-s-size-30">We are Web Design Heroes</h2>
+                <p class="text-size-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                    consequat, vel illum dolore eu feugiat nulla facilisis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section background-white">
         <div class="full-width text-center">
-          <img class="center margin-bottom-30" style="margin-top: -210px;" src="{% static 'img/bio.png'%}" alt="">
-          <div class="line">
-            <h2 class="headline text-thin text-s-size-30">Fully <span class="text-primary">Responsive</span> HTML5 Template</h2>
-            <p class="text-size-20 text-s-size-16 text-thin">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-            <i class="icon-more_node_links icon2x text-primary margin-top-bottom-10"></i>
-            <p class="text-size-20 text-s-size-16 text-thin text-primary">Try resize your browser window</p>
-          </div>  
-        </div>  
-      </section>
-      <hr class="break margin-top-bottom-0">
-      
-      <!-- Section 4 --> 
-      <section class="section background-white">
+            <img class="center margin-bottom-30" style="margin-top: -210px;" src="{% static 'img/bio.png' %}" alt="">
+            <div class="line">
+                <h2 class="headline text-thin text-s-size-30">Fully <span class="text-primary">Responsive</span> HTML5
+                    Template</h2>
+                <p class="text-size-20 text-s-size-16 text-thin">Duis autem vel eum iriure dolor in hendrerit in
+                    vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Duis autem vel
+                    eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+                    feugiat nulla facilisis</p>
+                <i class="icon-more_node_links icon2x text-primary margin-top-bottom-10"></i>
+                <p class="text-size-20 text-s-size-16 text-thin text-primary">Try resize your browser window</p>
+            </div>
+        </div>
+    </section>
+    <hr class="break margin-top-bottom-0">
+
+    <!-- Section 4 -->
+    <section class="section background-white">
         <div class="line">
-          <h2 class="text-thin headline text-center text-s-size-30 margin-bottom-50">From Our <span class="text-primary">Blog</span></h2>
-          <div class="carousel-default owl-carousel carousel-wide-arrows">
-            <div class="item">
-              <div class="margin"> 
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
+            <h2 class="text-thin headline text-center text-s-size-30 margin-bottom-50">From Our <span
+                    class="text-primary">Blog</span></h2>
+            <div class="carousel-default owl-carousel carousel-wide-arrows">
+                <div class="item">
                     <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-05.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
+
+                        <div class="s-12 m-12 l-8">
+                            <div class="image-border-radius">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-03.jpg' %}"
+                                                                                  alt=""></a>
+                                    </div>
+                                    <div class="s-12 m-12 l-8">
+                                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit
+                                            Amet</a></h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                            consequat.</p>
+                                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
+                <div class="item">
                     <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-03.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
-                </div> 
-              </div>
-            </div>
-            <div class="item"> 
-              <div class="margin"> 
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-04.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
+                        <div class="s-12 m-12 l-6">
+                            <div class="image-border-radius margin-m-bottom">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-04.jpg' %}"
+                                                                                  alt=""></a>
+                                    </div>
+                                    <div class="s-12 m-12 l-8 margin-m-bottom">
+                                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit
+                                            Amet</a></h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                            consequat.</p>
+                                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-12 m-12 l-6">
+                            <div class="image-border-radius">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-02.jpg' %}"
+                                                                                  alt=""></a>
+                                    </div>
+                                    <div class="s-12 m-12 l-8">
+                                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit
+                                            Amet</a></h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                            consequat.</p>
+                                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
+                <div class="item">
                     <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-02.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
-                </div> 
-              </div>
-            </div>
-            <div class="item">
-              <div class="margin"> 
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-01.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
+                        <div class="s-12 m-12 l-6">
+                            <div class="image-border-radius margin-m-bottom">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-01.jpg' %}"
+                                                                                  alt=""></a>
+                                    </div>
+                                    <div class="s-12 m-12 l-8 margin-m-bottom">
+                                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit
+                                            Amet</a></h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                            consequat.</p>
+                                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-12 m-12 l-6">
+                            <div class="image-border-radius">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-06.jpg' %}"
+                                                                                  alt=""></a>
+                                    </div>
+                                    <div class="s-12 m-12 l-8">
+                                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit
+                                            Amet</a></h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                            consequat.</p>
+                                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'img/blog-06.jpg'%}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>  
-                  </div>
-                </div> 
-              </div>
             </div>
-          </div>
-        </div>    
-      </section>
-      
-    </main>
+        </div>
+    </section>
+
+</main>

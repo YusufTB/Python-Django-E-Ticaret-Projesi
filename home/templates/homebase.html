@@ -3,24 +3,29 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{% block title %} Django İş İlanı {% endblock %}</title>
     <meta name="keywords" content="{% block keywords %} Anasayfa anahtar kelimeler {% endblock %}"/>
     <meta name="description" content="{% block description %} Anasayfa kısa açıklama {% endblock %}"/>
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/components.css'%}">
-    <link rel="stylesheet" href="{% static 'css/icons.css'%}">
-    <link rel="stylesheet" href="{% static 'css/responsee.css'%}">
-    <link rel="stylesheet" href="{% static 'owl-carousel/owl.carousel.css'%}">
-    <link rel="stylesheet" href="{% static 'owl-carousel/owl.theme.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'owl-carousel/owl.theme.css' %}">
+
+
+
     <!-- CUSTOM STYLE -->
-    <link rel="stylesheet" href="{% static 'css/template-style.css'%}">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery-ui.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/validation.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/template-style.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/validation.js' %}"></script>
 
     {% block head %} {% endblock %}
 </head>
