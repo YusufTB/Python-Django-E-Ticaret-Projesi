@@ -1,0 +1,47 @@
+{% extends 'homebase.html' %}
+
+{% block title %} {% endblock %}
+{% block keywords %} {% endblock %}
+{% block description %}{% endblock %}
+
+
+{% block content %}
+    <!-- MAIN -->
+    <main role="main">
+        <!-- Content -->
+        <article>
+            <header class="section background-primary text-center">
+                <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">Aramanızla Eşleşen Sonuçlar</h1>
+            </header>
+            <div class="section background-white">
+                <div class="line">
+                    <div class="margin text-center">
+
+                        <table cellpadding="3" width="1200">
+                            <tr>
+                                <th>Image</th>
+                                <th>İlan İsmi</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                            {% for rs in products %}
+                                <tr>
+                                    <td><img src="{{ rs.image.url }}" style="width: 75px;height: 75px"></td>
+                                    <td>{{ rs.title }}</td>
+                                    <td>{{ rs.category }}</td>
+                                    <td>{{ rs.price }}</td>
+                                    <td>
+                                        <a class="button border-radius background-primary text-size-12 text-white text-strong"
+                                           href="/product/{{ rs.id }}/{{ rs.slug }}">Daha Fazla Bilgi Al</a></td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+{% endblock %}

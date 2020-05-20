@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6552ce7-bd07-410c-a507-3b0e49fba17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/product_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -148,7 +151,9 @@
       <workItem from="1589846636789" duration="358000" />
       <workItem from="1589847006833" duration="215000" />
       <workItem from="1589847234105" duration="3216000" />
-      <workItem from="1589918958524" duration="1806000" />
+      <workItem from="1589918958524" duration="1884000" />
+      <workItem from="1589929586645" duration="3824000" />
+      <workItem from="1589980952907" duration="9272000" />
     </task>
     <task id="LOCAL-00001" summary="8.video sonu">
       <created>1586643974589</created>
@@ -178,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589733845500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="18.video sonu">
+      <created>1589920893064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589920893064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +201,8 @@
     <MESSAGE value="10.video sonu" />
     <MESSAGE value="12.video sonu" />
     <MESSAGE value="15.video sonu" />
-    <option name="LAST_COMMIT_MESSAGE" value="15.video sonu" />
+    <MESSAGE value="18.video sonu" />
+    <option name="LAST_COMMIT_MESSAGE" value="18.video sonu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1589847245551">
@@ -200,10 +213,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="189" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586788951052" />
-    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1589733844799">
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1589920892274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589733844799" />
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589920892274" />
     <state x="557" y="184" key="FileChooserDialogImpl" timestamp="1586788839556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,14 +229,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="116" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587466457451" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1589733852878">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1589920896643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589733852878" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1589918962104">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589920896643" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1589980952882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589918962104" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589980952882" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588688102624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
