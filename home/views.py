@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
@@ -62,10 +63,11 @@ def category_products(request,id,slug):
 
 def product_detail(request,id,slug):
     category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     product = Product.objects.get(pk=id)
     images=Images.objects.filter(product_id=id)
     comments=Comment.objects.filter(product_id=id,status='True')
-    context = {'category': category,'product':product,'images':images,'comments':comments}
+    context = {'category': category,'setting':setting,'product':product,'images':images,'comments':comments}
     return render(request,'product_detail.html',context,)
 
 def product_search(request):
@@ -79,3 +81,23 @@ def product_search(request):
             return  render(request,'product_search.html',context)
 
     return  HttpResponseRedirect('/')
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, "Lütfen Kullanıcı Adınız Veya Şifrenizi Kontrol Ediniz.")
+            return HttpResponseRedirect('/login')
+    category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    context = {'category': category,'setting':setting}
+    return render(request, 'login.html', context)
