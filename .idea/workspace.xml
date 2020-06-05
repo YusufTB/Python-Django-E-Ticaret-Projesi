@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6552ce7-bd07-410c-a507-3b0e49fba17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +56,7 @@
         <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="auth_user: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="home_setting: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="home_userprofile: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -92,11 +94,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\myproject\user\templates" />
+      <recent name="C:\Django\myproject\user" />
       <recent name="C:\Django\myproject\home\templates" />
       <recent name="C:\Django\myproject\myproject" />
     </key>
@@ -156,7 +160,12 @@
       <workItem from="1589918958524" duration="1884000" />
       <workItem from="1589929586645" duration="3824000" />
       <workItem from="1589980952907" duration="9295000" />
-      <workItem from="1590499513344" duration="5666000" />
+      <workItem from="1590499513344" duration="5700000" />
+      <workItem from="1590784946623" duration="234000" />
+      <workItem from="1590859341292" duration="4861000" />
+      <workItem from="1591013588993" duration="2673000" />
+      <workItem from="1591194553227" duration="7540000" />
+      <workItem from="1591382803243" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="8.video sonu">
       <created>1586643974589</created>
@@ -200,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589990257160</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="24.video sonu">
+      <created>1590506082916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590506082916</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +229,8 @@
     <MESSAGE value="15.video sonu" />
     <MESSAGE value="18.video sonu" />
     <MESSAGE value="20.video sonu" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.video sonu" />
+    <MESSAGE value="24.video sonu" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.video sonu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1589847245551">
@@ -224,10 +241,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="189" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586788951052" />
-    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1589990256488">
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1590506082294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589990256488" />
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590506082294" />
     <state x="557" y="184" key="FileChooserDialogImpl" timestamp="1586788839556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -240,14 +257,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="116" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587466457451" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1589990259721">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1590506085929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589990259721" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1590499566577">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590506085929" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1591382803359">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590499566577" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591382803359" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588688102624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
