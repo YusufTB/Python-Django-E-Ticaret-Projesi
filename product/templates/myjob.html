@@ -1,0 +1,44 @@
+{% extends 'homebase.html' %}
+
+{% block title %} {{ profile.user_name }} Profile{% endblock %}
+{% block keywords %} {{ setting.keywords }}{% endblock %}
+{% block description %} {{ setting.description }}{% endblock %}
+
+
+{% block content %}
+    <!-- MAIN -->
+    <main role="main">
+        <!-- Content -->
+        <article>
+            <header class="section background-primary text-center">
+                <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">Contact Us</h1>
+            </header>
+            <div class="section background-white">
+                <div class="line">
+
+                    <div class="margin">
+
+
+                        {% include "user_panel.html" %}
+
+                        <!-- Contact Form -->
+                        <div class="s-12 m-12 l-8">
+                            <h2 class="text-uppercase text-strong margin-bottom-30">User Profile</h2>
+                            <hr style="color: green ; border:1px solid">
+
+
+                                    <a class="button border-radius background-primary text-size-12 text-white text-strong"
+                                           href="/product/newjob">Yeni İş İlanı Aç!</a>
+                                    <a class="button border-radius background-primary text-size-12 text-white text-strong"
+                                           href="/user/password">Şifre Değiştir</a>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+{% endblock %}

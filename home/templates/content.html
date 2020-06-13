@@ -12,7 +12,7 @@
                     <div class="s-12 m-12 l-4 margin-m-bottom">
                         <img class="margin-bottom" src="{{ rs.image.url }}" alt="" style="height: 210px; width: 350px">
                         <h2 class="text-thin">{{ rs.title }}</h2>
-                        <p>{{ rs.detail | safe }}</p>
+                        <p>{{ rs.description | safe }}</p>
                         <a class="text-more-info text-primary-hover" href="/product/{{ rs.id }}/{{ rs.slug }}">Read more</a>
                     </div>
                 {% endfor %}
@@ -42,7 +42,7 @@
                     <div class="s-12 m-12 l-4 margin-m-bottom">
                         <img class="margin-bottom" src="{{ rs.image.url }}" alt="" style="height: 210px; width: 350px">
                         <h2 class="text-thin">{{ rs.title }}</h2>
-                        <p>{{ rs.detail | safe }}</p>
+                        <p>{{ rs.description | safe }}</p>
                         <a class="text-more-info text-primary-hover" href="/product/{{ rs.id }}/{{ rs.slug }}">Read more</a>
                     </div>
                 {% endfor %}

@@ -1,8 +1,9 @@
+from ckeditor.widgets import CKEditorWidget
 from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Select, FileInput
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.fields import TreeForeignKey
@@ -42,12 +43,11 @@ class Product(models.Model):
         ('False', 'Hayır'),
     )
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
     keywords = models.CharField(blank=True,max_length=200)
     description = models.CharField(blank=True,max_length=200)
     image = models.ImageField(blank=True, upload_to='images/')
-    price=models.FloatField()
-    amount=models.IntegerField()
     detail=RichTextUploadingField()
     slug = models.SlugField(blank=True,max_length=150)
     status = models.CharField(max_length=10, choices=STATUS)
@@ -60,6 +60,20 @@ class Product(models.Model):
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
     image_tag.short_description='Image'
+
+class ProductForm(ModelForm):
+    class Meta:
+        model = Product
+        fields = ['category', 'title', 'slug', 'keywords', 'description', 'image', 'detail']
+        widgets = {
+            'title': TextInput(attrs={'class': 'form-control', 'placeholder': 'title'}),
+            'slug': TextInput(attrs={'class': 'form-control', 'placeholder': 'slug'}),
+            'keywords': TextInput(attrs={'class': 'form-control', 'placeholder': 'keywords'}),
+            'description': TextInput(attrs={'class': 'form-control', 'placeholder': 'description'}),
+            'category': Select(attrs={'class': 'form-control', 'placeholder': 'type'}, choices=Category.objects.all()),
+            'image': FileInput(attrs={'class': 'form-control', 'placeholder': 'image'}),
+            'detail': CKEditorWidget(),
+        }
 
 class Images(models.Model):
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
@@ -94,3 +108,4 @@ class CommentForm(ModelForm):
     class Meta:
         model=Comment
         fields=['subject','comment']
+

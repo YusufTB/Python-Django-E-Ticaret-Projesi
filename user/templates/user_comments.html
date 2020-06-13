@@ -1,0 +1,71 @@
+{% extends 'homebase.html' %}
+
+{% block title %} {{ request.user.first_name }} Profile{% endblock %}
+{% block keywords %} {{ setting.keywords }}{% endblock %}
+{% block description %} {{ setting.description }}{% endblock %}
+
+
+{% block content %}
+    <!-- MAIN -->
+    <main role="main">
+        <!-- Content -->
+        <article>
+            <header class="section background-primary text-center">
+                <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">Contact Us</h1>
+            </header>
+            <div class="section background-white">
+                <div class="line">
+
+                    <div class="margin">
+
+
+                        {% include "user_panel.html" %}
+
+                        <!-- Contact Form -->
+                        <div class="s-12 m-12 l-8">
+                            <h2 class="text-uppercase text-strong margin-bottom-30">Yorumlarım</h2>
+                            <hr style="color: green ; border:1px solid">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <table cellpadding="3" width="1200">
+                                <tr>
+                                    <th></th>
+                                    <th>Product</th>
+                                    <th>Subject</th>
+                                    <th>Comment</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                                {% for rs in comments %}
+                                    <tr>
+                                        <td><img src="{{ rs.product.image.url }}" style="height: 60px; width: 50px">
+                                        </td>
+                                        <td>{{ rs.product.title }}</td>
+                                        <td>{{ rs.subject }}</td>
+                                        <td>{{ rs.comment }}</td>
+                                        <td>{{ rs.status }}</td>
+                                        <td>{{ rs.create_at }}</td>
+                                        <td>
+                                            <a class="button border-radius background-primary text-size-12 text-white text-strong"
+                                               href="/product/{{ rs.product.id }}/{{ rs.product.slug }}">Detay</a></td>
+                                        <td>
+                                            <a class="btn text-strong btn-warning"
+                                               href="/user/deletecomment/{{ rs.id }}"
+                                               onclick="return confirm('Delete Are you sure?')">Sil</a></td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+{% endblock %}

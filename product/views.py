@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
-from product.models import CommentForm, Comment
+from product.models import CommentForm, Comment, Category
 
 
 def index(request):
@@ -31,3 +31,13 @@ def addcomment(request,id):
 
     messages.warning(request, "Yorumunuz Kaydedilemedi.Lütfen Kontrol Ediniz.")
     return HttpResponseRedirect(url)
+
+def newjob(request):
+    category = Category.objects.all()
+    context = {'category': category,}
+    return render(request, 'newjob.html', context)
+
+def myjob(request):
+    category = Category.objects.all()
+    context = {'category': category,}
+    return render(request, 'myjob.html', context)

@@ -8,15 +8,13 @@
                 <div class="item" style="padding-left: 150px ; padding-right: 200px">
                     <div class="s-12 center">
                         <a href="/product/{{ rs.id }}/{{ rs.slug }}">
-                        <img src="{{ rs.image.url }}" alt="sliderimg" style="width: 800px;height: 500px">
+                        <img src="{{ rs.image.url }}" alt="sliderimg" style="width: 800px;height: 500px ; opacity: 40%">
 
                         <div class="carousel-content">
                             <div class="padding-2x">
                                 <div class="s-12 m-12 l-8">
                                     <p class="text-dark text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">{{ rs.title }}</p>
-                                    <p class="text-white text-size-16 margin-bottom-40">Duis autem vel eum iriure dolor
-                                        in hendrerit in vulputate velit<br> esse molestie consequat, vel illum dolore eu
-                                        feugiat nulla facilisis</p>
+                                    <p class="text-dark text-size-16 margin-bottom-40">{{rs.description |safe}}</p>
                                 </div>
                             </div>
                         </div>

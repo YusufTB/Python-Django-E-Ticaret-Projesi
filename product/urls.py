@@ -5,4 +5,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name="index"),
     path('addcomment/<int:id>', views.addcomment, name="addcomment"),
+    path('newjob/', views.newjob, name="newjob"),
+    path('myjob/', views.myjob, name="myjob"),
 ]

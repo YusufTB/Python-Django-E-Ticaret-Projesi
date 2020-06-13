@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile, FAQ
 from product.models import Product, Category, Images, Comment
 
 
@@ -56,9 +56,13 @@ def iletisim(request):
 
 def category_products(request,id,slug):
     category = Category.objects.all()
-    categorydata = Category.objects.get(pk=id)
-    products=Product.objects.filter(category_id=id)
-    context={'products':products, 'category':category, 'categorydata':categorydata}
+    categoryname = Category.objects.get(id=id)
+    categorydata = Category.objects.filter(parent_id=id)
+    productss=Product.objects.filter(category_id=id,status=True)
+    products=[]
+    for cat in categorydata:
+        products += Product.objects.filter(category_id=cat.id,status=True)
+    context={'products':products, 'category':category, 'categorydata':categorydata,'productss':productss,'categoryname':categoryname}
     return render(request,'products.html',context)
 
 def product_detail(request,id,slug):
@@ -124,3 +128,14 @@ def signup_view(request):
     setting = Setting.objects.get(pk=1)
     context = {'category': category, 'setting': setting, 'form': form,}
     return render(request, 'signup.html', context)
+
+def faq(request):
+    setting = Setting.objects.get(pk=1)
+    category = Category.objects.all()
+    faq = FAQ.objects.all().order_by('ordernumber')
+    context = {
+        'category': category,
+        'setting': setting,
+        'faq': faq,
+    }
+    return render(request, 'faq.html', context)

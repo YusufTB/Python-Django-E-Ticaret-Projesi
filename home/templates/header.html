@@ -6,8 +6,8 @@
         <div class="line">
             <div class="s-12 m-6 l-6">
                 <div class="top-bar-contact">
-                    <p class="text-size-12">Contact Us: 0800 200 200 | <a class="text-orange-hover"
-                                                                          href="mailto:contact@sampledomain.com">contact@sampledomain.com</a>
+                    <p class="text-size-12">Contact Us: {{setting.phone}} | <a class="text-orange-hover"
+                                                                          href="/faq">FAQ</a>
                     </p>
                 </div>
             </div>
@@ -65,8 +65,9 @@
                     <li><a> {{ user.first_name }}</a>
                         <ul>
                             <li><a href="/user">My Account</a></li>
-                            <li><a>My Orders</a></li>
-                            <li><a>My Comments</a></li>
+                            <li><a href="/user/applications">My Applications</a></li>
+                            <li><a href="/user/comments">My Comments</a></li>
+                            <li><a href="/user/contents">My Jobs</a></li>
                             <li><a href="/logout/">Logout</a></li>
                         </ul>
                     </li>
